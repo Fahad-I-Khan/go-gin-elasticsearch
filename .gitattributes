@@ -1,0 +1,2 @@
+# Ignore index.html from language stats
+index.html linguist-vendored
