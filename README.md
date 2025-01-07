@@ -291,3 +291,43 @@ if err != nil {
 - `es.Index.WithRefresh("true")`: Refreshes the index so the updated document is immediately searchable.
 
 This ensures consistency between your PostgreSQL and Elasticsearch data, preventing duplicate blog entries.
+
+## Running the Application with Docker Compose
+
+1. **Start PostgreSQL and Elasticsearch Containers**
+
+Run the following command to start both services in detached mode:
+
+```bash
+docker-compose up -d postgres elasticsearch
+```
+
+Check the status of the containers:
+
+```bash
+docker ps
+```
+
+2. **Build and Run the Application**
+
+To build and start the application:
+
+```bash
+docker-compose up --build
+```
+
+3. **Access the Application**
+
+Once the containers are running, you can access the API at:
+
+```bash
+http://localhost:8080
+```
+
+4. **Shut Down the Containers**
+
+To stop and remove the containers:
+
+```bash
+docker-compose down
+```
